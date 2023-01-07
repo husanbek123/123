@@ -1,14 +1,17 @@
 import './App.css';
-import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Section from './components/Section';
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
+import About_Us from './pages/About-Us';
 
 function App() {
   return (
     <>
       <Navbar title="Hello World" />
-      <Section title="how to fix something" />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about-us' element={<About_Us />} />
+      </Routes>
     </>
   );
 }
